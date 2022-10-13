@@ -1,4 +1,4 @@
-const dogs = [
+export const dogs = [
   {
     name: "Rex",
     avatar: "assets/dog-rex.jpg",
@@ -24,5 +24,3 @@ const dogs = [
     hasBeenLiked: false,
   },
 ];
-
-export default dogs;
