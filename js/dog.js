@@ -11,4 +11,12 @@ export class Dog {
     document.getElementById("name").innerText = this.name;
     document.getElementById("bio").innerHTML = this.bio;
   }
+
+  likeDog() {
+    this.hasBeenLiked = true;
+  }
+
+  swipDog() {
+    this.hasBeenSwiped = true;
+  }
 }
