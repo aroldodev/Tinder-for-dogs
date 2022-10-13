@@ -7,7 +7,7 @@ const swipButton = document.getElementById("cross-icon");
 const dogCount = dogs.length - 1;
 let currentDog = 0;
 
-const pet = new Dog(dogs[currentDog]);
+let pet = new Dog(dogs[currentDog]);
 
 pet.getDogHTML();
 
@@ -17,16 +17,18 @@ function nextDog() {
   } else {
     currentDog = 0;
   }
-  const pet = new Dog(dogs[currentDog]);
+  pet = new Dog(dogs[currentDog]);
   pet.getDogHTML();
 }
 
 likeButton.addEventListener("click", function () {
   pet.likeDog();
+  console.log(pet);
   setTimeout(nextDog, 3000);
 });
 
 swipButton.addEventListener("click", function () {
   pet.swipDog();
+  console.log(pet);
   setTimeout(nextDog, 3000);
 });
